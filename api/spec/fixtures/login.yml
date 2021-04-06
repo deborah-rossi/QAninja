@@ -1,0 +1,35 @@
+---
+- title: Senha incorreta
+  payload:
+    email: renato@gmail.com
+    password: debs124
+  code: 401
+  error: Unauthorized
+- title: Usuario nao existe
+  payload:
+    email: 404@gmail.com
+    password: debs123
+  code: 401
+  error: Unauthorized
+- title: E-mail em branco
+  payload:
+    email: ''
+    password: debs124
+  code: 412
+  error: required email
+- title: Sem o campo e-mail
+  payload:
+    password: debs124
+  code: 412
+  error: required email
+- title: Senha em branco
+  payload:
+    email: renato@gmail.com
+    password: ''
+  code: 412
+  error: required password
+- title: Sem o campo senha
+  payload:
+    email: renato@gmail.com
+  code: 412
+  error: required password
